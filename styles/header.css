@@ -1,0 +1,142 @@
+/* ========== HEADER STYLES ========== */
+
+
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 2rem 20px;
+  background-color: #091540;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 999;
+  box-sizing: border-box;
+}
+
+/* ========== LOGO + NAME ========== */
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.logo-container:hover {
+  color: #7692FF;
+}
+
+.site-name {
+  font-size: 2.5rem;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  transition: font-size 0.3s ease;
+  text-decoration: none;
+}
+
+.logo {
+  height: 40px;
+  filter: grayscale(100%) brightness(150%);
+  transition: filter 0.3s ease;
+}
+
+.logo-container:hover .logo {
+  filter: brightness(0) saturate(100%) invert(45%) sepia(100%) saturate(500%) hue-rotate(200deg);
+}
+
+/* ========== NAVIGATION LINKS ========== */
+
+.header-right {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-right: 4rem;
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none; /* prevent underline */
+  color: #ECE2D0;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #7692FF;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #97c9c5;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media screen and (max-width: 992px) {
+  .site-name {
+    font-size: 2rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+
+  .logo {
+    height: 35px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .site-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header-right {
+    justify-content: center;
+  }
+
+  .site-name {
+    font-size: 1.7rem;
+  }
+
+  .nav-link {
+    font-size: 0.95rem;
+  }
+
+  .logo {
+    height: 30px;
+  }
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+header a:link,
+header a:visited,
+header a:hover,
+header a:active {
+  text-decoration: none;
+}
+
