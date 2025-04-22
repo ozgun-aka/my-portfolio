@@ -1,15 +1,5 @@
-/* ========== GENERAL SECTION STYLES ========== */
-section {
-  padding: 2rem 0;
-}
-
-h1, h2, h3 {
-  font-family: 'Bricolage Grotesque', sans-serif;
-}
-
-/* ========== INTRO SECTION ========== */
+/*  INTRO SECTION  */
 .intro-section {
-  background-color: #091540;
   color: #ECE2D0;
   display: flex;
   justify-content: center;
@@ -17,7 +7,7 @@ h1, h2, h3 {
   flex-direction: column;
   min-height: 100vh;
   text-align: center;
-  font-family: 'Bricolage Grotesque', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 .intro-content {
@@ -38,8 +28,8 @@ h1, h2, h3 {
 }
 
 .intro-text {
-  font-size: 9rem;
-  line-height: 0.5;
+  font-size: 9.5rem;
+  line-height: 1;
   animation: slide-up 1.2s ease forwards;
   opacity: 0;
   white-space: nowrap;
@@ -49,7 +39,7 @@ h1, h2, h3 {
 .intro-image-1,
 .intro-image-2 {
   width: 100%;
-  max-width: 500px;
+  max-width: 620px;
   max-height: 150px;
   opacity: 0;
   animation-fill-mode: forwards;
@@ -75,7 +65,7 @@ h1, h2, h3 {
   to { transform: translateX(0); opacity: 1; }
 }
 
-/* ========== RESPONSIVE INTRO FIXES ========== */
+/* RESPONSIVE INTRO */
 @media screen and (max-width: 768px) {
   .intro-row {
     flex-direction: column;
@@ -83,7 +73,7 @@ h1, h2, h3 {
   }
 
   .intro-text {
-    font-size: 2rem;
+    font-size: 3rem;
     white-space: normal;
   }
 
@@ -93,8 +83,7 @@ h1, h2, h3 {
   }
 }
 
-
-/* ========== ABOUT SECTION ========== */
+/*  ABOUT SECTION  */
 .about-section {
   display: flex;
   justify-content: flex-end;
@@ -105,6 +94,7 @@ h1, h2, h3 {
 
 .about-title {
   font-size: 4rem;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 .about-text {
@@ -114,11 +104,6 @@ h1, h2, h3 {
 
 .about-text p {
   font-size: 2rem;
-}
-
-.about-image img {
-  width: 250px;
-  height: 30vh;
 }
 
 .more-link {
@@ -131,8 +116,9 @@ h1, h2, h3 {
   color: #ECE2D0;
   text-decoration: none;
   transition: color 0.3s ease;
-  font-size: 2rem;
+  font-size: 6rem;
   overflow: hidden;
+  width: 9rem;
 }
 
 .more-link:hover {
@@ -140,14 +126,19 @@ h1, h2, h3 {
 }
 
 .more-icon {
-  height: 60px;
-  width: 60px;
+  height: 120px;
+  width: 120px;
+  transition: transform 1s ease;
 }
 
-/* ========== WORKS SECTION ========== */
+.more-link:hover .more-icon {
+  transform: translateX(8px);
+}
+
+/*  WORKS SECTION  */
 
 .my-works-title {
-  font-family: 'Bricolage Grotesque', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 3rem;
   border-bottom: 1px solid #ece2d051;
 }
@@ -243,7 +234,7 @@ h1, h2, h3 {
   stroke: #97c9c5;
 }
 
-/* ========== RESPONSIVE ========== */
+/*  RESPONSIVE  */
 @media screen and (max-width: 768px) {
   .work-item.left,
   .work-item.right {

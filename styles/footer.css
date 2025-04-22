@@ -1,42 +1,32 @@
-
 .site-footer {
   border-top: 1px solid #ece2d051;
-  padding: 2rem 0;
+  padding: 2rem 1rem; 
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-wrap: nowrap; 
   margin-top: 4rem;
+  gap: 1rem; 
 }
 
 .footer-left {
-  flex: 1;
-  font-size: 3rem;
-  font-family: 'Bricolage Grotesque', sans-serif;
-  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  font-size: 2rem;
+  font-family: "Bebas Neue", sans-serif;
+  margin-left: 0; 
   color: #ece2d0;
   padding-top: 0.5rem;
+  min-width: 200px;
 }
 
 .footer-icons {
   display: flex;
   gap: 1rem;
   margin-top: 0.2rem;
-  width: 150px;
-}
-
-.footer-right {
-  margin-right: 5rem;
-  font-size: 1.5rem;
-  color: #ece2d08a;
-  padding-top: 2rem;
-}
-
-.footer-right ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  flex-shrink: 0;
+  width: auto;
 }
 
 .footer-icons svg {
@@ -53,3 +43,21 @@
   color: #97c9c5;
 }
 
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: clamp(1rem, 1.5vw, 1.5rem); 
+  color: #ece2d08a;
+  padding-top: 2rem;
+  margin-right: 0;
+  flex-shrink: 0;
+}
+
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}

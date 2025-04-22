@@ -2,18 +2,30 @@
   box-sizing: border-box;
 }
 
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: #091540;
   color: #ECE2D0;
   box-sizing: border-box;
   padding: 50px;
   padding-top: 0;
+}
+
+section {
+  padding: 2rem 0;
+}
+
+h1, h2, h3 {
+  font-family: "Bebas Neue", sans-serif;
 }
 
 a {
@@ -33,13 +45,12 @@ img {
   display: block;
 }
 
-/* Layout Responsiveness */
 section {
   padding: 4rem 0;
 }
 
 h1, h2, h3 {
-  font-family: 'Bricolage Grotesque', sans-serif;
+  font-family: "Oranienbaum", serif;
 }
 
 @media screen and (max-width: 768px) {
@@ -55,4 +66,91 @@ h1, h2, h3 {
   .about-image {
     margin-top: 1rem;
   }
+}
+
+.gradient-background {
+  background: linear-gradient(300deg, rgb(4, 107, 107), rgb(8, 27, 28), rgb(1, 45, 29));
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1; 
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #111111;
+  color: #ECE2D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  flex-direction: column;
+  animation: slideUpSplash 1.5s ease-in-out forwards;
+  animation-delay: 1.5s;
+  overflow: hidden;
+}
+
+.splash-content {
+  text-align: center;
+  z-index: 2;
+}
+
+.splash h1 {
+  font-size: 5rem;
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+  animation-delay: 0.3s;
+  margin-bottom: 10px;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.splash p {
+  font-size: 1.2rem;
+  color: #aaaaaa8b;
+  margin: 0;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUpSplash {
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.main {
+  height: 100%;
+  background: white;
+  padding: 50px;
+  text-align: center;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 1s ease-in;
 }

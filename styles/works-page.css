@@ -2,13 +2,17 @@
   box-sizing: border-box;
 }
 
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   min-height: 100vh;
   overflow-x: auto;
   font-family: 'Roboto', sans-serif;
@@ -20,7 +24,7 @@ body {
   left: 0;
   width: 60px;
   height: 100vh;
-  background-color: #091540;
+  background-color: rgb(2, 18, 18);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -46,10 +50,10 @@ body {
 .horizontal-scroll {
   display: flex;
   flex-direction: row;
-  min-height: 100vh; /* allow it to grow if children grow */
+  min-height: 100vh;
   align-items: stretch;
   white-space: nowrap;
-  margin-left: 60px; /* for the sidebar */
+  margin-left: 60px;
 }
 
 .panel {
@@ -62,8 +66,8 @@ body {
 }
 
 .image-panel {
-  width: 60vw;         /* Takes up 60% of the viewport width */
-  flex-shrink: 0;      /* Don't let it get smaller */
+  width: 60vw;
+  flex-shrink: 0;
   overflow: hidden;
   display: flex;
 }
@@ -72,7 +76,7 @@ body {
   width: 40vw;
   flex-shrink: 0;
   padding: 2rem;
-  background-color: #091540;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -90,9 +94,9 @@ body {
 
 .text-panel h1,
 .text-panel p {
-  overflow-wrap: break-word;   /* break long words */
+  overflow-wrap: break-word;
   word-break: break-word;
-  white-space: normal;         /* allow line breaks */
+  white-space: normal;
 }
 
 .text-panel p,
@@ -151,5 +155,33 @@ body {
   }
 }
 
+.gradient-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(300deg, rgb(4, 107, 107), rgb(8, 27, 28), rgb(1, 45, 29));
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+  z-index: -1;
+}
 
 
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.content {
+  padding: 20px;
+  color: white;
+  position: relative;
+}

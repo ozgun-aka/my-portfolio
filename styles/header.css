@@ -1,29 +1,25 @@
-/* ========== HEADER STYLES ========== */
-
-
 .site-header {
   position: fixed;
   top: 0;
   width: 100%;
   padding: 2rem 20px;
-  background-color: #091540;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  align-items: center; 
+  flex-wrap: nowrap; 
   z-index: 999;
   box-sizing: border-box;
+  transition: padding 0.3s ease;
 }
-
-/* ========== LOGO + NAME ========== */
 
 .logo-container {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  align-items: center; 
+  gap: 20px; 
   text-decoration: none;
   color: inherit;
   transition: color 0.3s ease;
+  height: 100%; 
 }
 
 .logo-container:hover {
@@ -31,39 +27,41 @@
 }
 
 .site-name {
-  font-size: 2.5rem;
-  font-family: 'Bricolage Grotesque', sans-serif;
-  transition: font-size 0.3s ease;
+  font-size: 2.5vw;
+  font-family: "Bebas Neue", sans-serif;
+  transition: font-size 0.2s ease;
   text-decoration: none;
+  line-height: 1; 
 }
 
 .logo {
-  height: 40px;
+  height: 2vw; 
   filter: grayscale(100%) brightness(150%);
   transition: filter 0.3s ease;
+  vertical-align: middle; 
 }
 
 .logo-container:hover .logo {
   filter: brightness(0) saturate(100%) invert(45%) sepia(100%) saturate(500%) hue-rotate(200deg);
 }
 
-/* ========== NAVIGATION LINKS ========== */
+/*  NAVIGATION  */
 
 .header-right {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
-  padding-right: 4rem;
+  padding-right: 5.5rem;
 }
 
 .nav-link {
   position: relative;
-  text-decoration: none; /* prevent underline */
+  text-decoration: none;
   color: #ECE2D0;
   font-weight: 500;
   font-family: 'Roboto', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   transition: color 0.3s ease;
 }
 
@@ -86,43 +84,53 @@
   width: 100%;
 }
 
-/* ========== RESPONSIVE ========== */
+/*  RESPONSIVE */
 
+/* Medium Screens */
 @media screen and (max-width: 992px) {
-  .site-name {
-    font-size: 2rem;
+  .site-header {
+    padding: 1.5rem 15px;
   }
 
-  .nav-link {
-    font-size: 1rem;
+  .site-name {
+    font-size: 2rem;
   }
 
   .logo {
     height: 35px;
   }
+
+  .nav-link {
+    font-size: 1rem;
+  }
 }
 
+/* Small Screens */
 @media screen and (max-width: 600px) {
   .site-header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex-direction: row; 
+    justify-content: space-between; 
+    padding: 1rem 10px; 
   }
 
-  .header-right {
-    justify-content: center;
+  .logo-container {
+    gap: 5px; 
   }
 
   .site-name {
-    font-size: 1.7rem;
+    font-size: 1.2rem; 
+  }
+
+  .logo {
+    height: 25px;
+  }
+
+  .header-right {
+    gap: 1rem;
   }
 
   .nav-link {
     font-size: 0.95rem;
-  }
-
-  .logo {
-    height: 30px;
   }
 }
 
@@ -139,4 +147,3 @@ header a:hover,
 header a:active {
   text-decoration: none;
 }
-
